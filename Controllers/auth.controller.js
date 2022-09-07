@@ -8,8 +8,8 @@ const asyncWrapper = require("../Middleware/async");
 const mailer = require("../utils/mailer");
 const md5 = require('md5');
 const {sendMail} = require('../utils/mailer')
-const URL_FE = 'http://localhost:3000/'
-const URL_BE = 'http://localhost:8080/'
+const URL_FE = 'https://alohamoney.vercel.app/'
+const URL_BE = 'https://apialoha.vercel.app/'
 
 const defaultAvatar = "https://firebasestorage.googleapis.com/v0/b/aloha-money.appspot.com/o/DefaultUser.jpg?alt=media&token=58615f07-c33a-42f7-aa11-43b9d8170593"
 
