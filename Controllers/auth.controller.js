@@ -67,7 +67,7 @@ module.exports = {
 
     checkSignUp: asyncWrapper(async (req, res) => {
         await User.findOneAndUpdate({email: req.query.email}, {isActive: true})
-        return res.redirect('http://localhost:3000/login')
+        return res.redirect('https://alohamoney.vercel.app/login')
     }),
 
     signin: asyncWrapper(async function (req, res) {
@@ -136,7 +136,7 @@ module.exports = {
             });
         }
         const token = md5(user._id + user.email + new Date().getTime());
-        const resetUrl = `${process.env.NODE_ENV === 'prod' ? '' : 'http://localhost:3000'}/reset-password/${token}`;
+        const resetUrl = `${process.env.NODE_ENV === 'prod' ? '' : 'https://alohamoney.vercel.app/'}/reset-password/${token}`;
         let newResetPassword = new ResetPassword({
             userId: user._id,
             token: token,
