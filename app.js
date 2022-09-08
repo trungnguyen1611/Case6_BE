@@ -33,9 +33,6 @@ app.get('/', function(req, res) {
 });
 
 
-app.get("/", (req, res) => {
-    res.send("Express on Vercel");
-});
 app.use('/auth', auth);
 app.use('/icon', icon);
 app.use('/user', user);
