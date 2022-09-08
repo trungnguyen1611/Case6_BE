@@ -28,6 +28,7 @@ module.exports = {
         } else {
             const hashPassword = await argon2.hash(req.body.password)
             let newUser = new User({
+                username:req.body.username,
                 email: req.body.email,
                 password: hashPassword,
                 avatarUrl: defaultAvatar,
